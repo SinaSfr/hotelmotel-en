@@ -1,0 +1,232 @@
+<basis core="dbsource" source="basiscore" name="db" mid="10" lid="1">
+    <member name="offices" type="list" propertyid="8139,8140,36529,3087483" />
+</basis>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+        <!-- Title & Description -->
+        <title>[##cms.seo.title|(رزرو هتل - خرید بلیط هواپیما - هتل متل)##]
+        </title>
+        <meta name="description" content="[##cms.seo.description|(آژانس گردشگری هتل متل؛ تخصص در ارائه هتل های زیبا و به یاد ماندنی در کیش، اقامتگاه‌های لوکس ، و تجربه سفرهای به‌یادماندنی. با بهترین قیمت‌ها و خدمات VIP، سفری دلپذیر را تجربه کنید.)##]">
+        <!-- Title & Description -->
+        <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+            <member type="list" name="list" request="taglist" preview=""></member>
+        </basis>
+        <basis core="print" datamembername="tag.list">
+            <face filter="key = 'canonical'">
+                <link rel="canonical" href="@value" />
+            </face>
+            <face>
+                <meta property="@key" content="@value" />
+            </face>
+        </basis>
+        <!-- pwa metatags -->
+        <basis core="call" file="pwa.inc" pageindex="[##cms.cms.pageindex##]"/>
+        <!-- common styles for all page -->
+        <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]"/>
+    </head>
+<body>
+    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"/>
+    <main>
+        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-10 p-4 bg-secondary-50 rounded-3xl">
+            <div>
+                <h2 class="text-primary-900 font-bold text-xl mb-2">پیشنهادها و شکایات</h2>
+                <div class="text-zinc-900 text-justify">
+                    در صورتی که پیشنهادی جهت ارتقای کیفیت خدمت‌رسانی در هتل متل دارید یا در مورد یکی از خریدهای قبلی خود نیاز به پشتیبانی یا ثبت شکایت دارید، درخواست خود را از طریق فرم زیر ثبت کنید. 
+                </div>
+            </div>
+            <div class="mt-6">
+                <h2 class="text-zinc-900 text-xl mb-4">فرم پیشنهاد و شکایات هتل متل</h2>
+                <div class="flex flex-col mx-auto suggest-form" id="suggest-form-resize">
+
+                    <basis core="schema" run="atclient"
+                        schemaurl="/schema/domainform/6F59ECD9-038B-4D63-80B3-E77B8695FE9D/50AE2618-1996-4DCD-ACA5-CB7D75BE9815/fa/پیشنهادها-و-شکایات"
+                        displaymode="new" button="[data-btn-uploadSuggest]" resultsourceid="upload.dataSuggest"
+                        OnRendered="RenderFormSuggest"></basis>
+                    <basis core="api" if="{##cms.uploadSuggest.run|(false)##}" run="atclient"
+                        url="/schema/domainform/6F59ECD9-038B-4D63-80B3-E77B8695FE9D/fa/editobject" method="post"
+                        body="object_edit={##cms.uploadSuggest.value##}&captcha={##cms.uploadSuggest.captcha##}&captchaid={##cms.uploadSuggest.captchaid##}"
+                        content-type="application/x-www-form-urlencoded" triggers='cms.uploadSuggest'
+                        OnProcessed="OnProcessedEditObjectSuggest"></basis>
+                    <basis core="callback" run="atclient" method="uploadDocumentSuggest" triggers="upload.dataSuggest">
+                    </basis>
+    
+                    <div class="captcha-button flex flex-col items-center justify-center mt-4">
+                        <div id="captchaContainer" class="captchaContainerclass captcha-sefaresh w-auto"
+                            data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                            data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                            <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                                triggers="captcha.refreshSuggest">
+                                <member name="code-suggest" type="scalar" request="captcha"></member>
+                            </basis>
+                            <basis datamembername="captcha.code-suggest" core="print" run="atclient">
+                                <face>
+                                    <script type="text/template"><div class="d-inline-block"><div class="flex gap-6">
+                    
+                                        <div class="float-right flex-1"><input type="text" class="!w-[287px] contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                        <div class="flex items-center gap-6">
+                                            <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
+                                            <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaSuggest()" width="24" height="24" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#18181B"/></svg>
+                                        </div>
+                                        
+                                    </div></div></script>
+                                </face>
+                            </basis>
+                        </div>
+                        <button
+                            class="w-full mt-6 px-4 text-white transition-all duration-300 y-2 data-body-btn h-12 bg-primary-900 rounded-[40px] hover:bg-secondary-600"
+                            type="button" data-btn-uploadSuggest><span class="">ارسال</span></button>
+                        <div
+                            class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                            <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                                <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                                <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center text-primary-600 message-api"></div>
+                </div>
+            </div>
+        </section>
+        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-9">
+            <h1 class="font-bold text-3xl text-primary-900 mb-6">با ما در ارتباط باشید</h1>
+            <div class="text-zinc-900 text-justify">
+                لطفا پیش از ارسال ایمیل یا تماس تلفنی، ابتدا پرسش های متداول را مشاهده کنید. در صورتی که پاسخ سوالات خود را در بخش سوالات متداول 
+نیافتید، این افتخار را داریم تا در هر ساعتی از شبانه روز و تمامی روزهای هفته پاسخگوی شما باشیم.
+            </div>
+            <basis core="print" datamembername="db.offices">
+                <layout>
+                    <div class="flex flex-col gap-6 mt-8">
+                        @child
+                    </div>
+                </layout>
+                <face filter="id in(2312786)">
+                    <div class="flex flex-col gap-4">
+                        <iframe defer title="hotelmotel-location" class="rounded-xl h-56 object-cover"
+                        width="100%" height="222" loading="lazy" target="_blank" allowfullscreen
+                        src="@prp_36529"></iframe>
+                        <div class="flex items-center gap-1 text-sm text-zinc-900">
+                            <svg width="31" height="32" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-location"></use>
+                            </svg>
+                            @prp_8139
+                        </div>
+                        <a href="tel:@prp_8140" class="group flex items-center gap-1 text-sm">
+                            <svg width="31" height="32" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-telephone"></use>
+                            </svg>
+                            <div class="relative">
+                                <span class="text-lg font-bold">شماره موبایل پشتیبانی:</span> <span class="text-xl text-zinc-900">@prp_8140</span>
+    
+                            </div>
+                        </a>
+                    </div>
+                </face>
+                <face filter="id in(2312796)">
+                    <div class="flex flex-col gap-4">
+                        <iframe defer title="hotelmotel-location" class="rounded-xl h-56 object-cover"
+                        width="100%" height="222" loading="lazy" target="_blank" allowfullscreen
+                        src="@prp_36529"></iframe>
+                        <div class="flex items-center gap-1 text-sm text-zinc-900">
+                            <svg width="31" height="32" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-location"></use>
+                            </svg>
+                            @prp_8139
+                        </div>
+                        <a href="tel:@prp_8140" class="group flex items-center gap-1 text-sm">
+                            <svg width="31" height="32" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-mobile"></use>
+                            </svg>
+                            <div class="relative flex items-center justify-between w-full">
+                                <span class="text-lg font-bold">شماره تلفن:</span> <span class="text-xl text-zinc-900">@prp_8140</span>
+    
+                            </div>
+                        </a>
+                    </div>
+                </face>
+            </basis>
+  
+        </section>
+        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-20 mb-10 py-6 px-3 bg-secondary-200 rounded-lg">
+            <div class="flex justify-center">
+                <svg width="124" height="118">
+                    <use xlink:href="./images/sprite-icons.svg#icon-open-mail"></use>
+                </svg>
+            </div>
+            <div class="flex flex-col items-center">
+                <basis core="print" datamembername="db.info">
+                    <face filter="TypeID in(242)">
+                        <a href="mailto:@text" class="text-secondary-600 text-xl mb-3">@text</a>
+                    </face>
+                </basis>
+                <h2 class="text-white text-lg">با ایمیل با ما در ارتباط باشید</h2>
+            </div>
+            <div class="flex flex-col mx-auto contact-form" id="contact-form-resize">
+
+                <basis core="schema" run="atclient"
+                    schemaurl="/schema/domainform/6F59ECD9-038B-4D63-80B3-E77B8695FE9D/90FFCAA8-7817-4ADD-AE37-5BE0BC442250/fa/با-ایمیل-با-ما-در-ارتباط-باشید"
+                    displaymode="new" button="[data-btn-uploadContact]" resultsourceid="upload.dataContact"
+                    OnRendered="RenderFormContact"></basis>
+                <basis core="api" if="{##cms.uploadContact.run|(false)##}" run="atclient"
+                    url="/schema/domainform/6F59ECD9-038B-4D63-80B3-E77B8695FE9D/fa/editobject" method="post"
+                    body="object_edit={##cms.uploadContact.value##}&captcha={##cms.uploadContact.captcha##}&captchaid={##cms.uploadContact.captchaid##}"
+                    content-type="application/x-www-form-urlencoded" triggers='cms.uploadContact'
+                    OnProcessed="OnProcessedEditObjectContact"></basis>
+                <basis core="callback" run="atclient" method="uploadDocumentContact" triggers="upload.dataContact">
+                </basis>
+
+                <div class="captcha-button flex flex-col items-center justify-center">
+                    <div id="captchaContainer" class="captchaContainerclass captcha-sefaresh w-auto"
+                        data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                        data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                        <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                            triggers="captcha.refreshContact">
+                            <member name="code" type="scalar" request="captcha"></member>
+                        </basis>
+                        <basis datamembername="captcha.code" core="print" run="atclient">
+                            <face>
+                                <script type="text/template"><div class="d-inline-block"><div class="flex flex-col gap-4">
+                
+                                    <div class="float-right w-[323px]"><input type="text" class="!w-[287px] contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="کد امنیتی"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                    <div class="flex items-center gap-6">
+                                        <img src="/@captcha@" loading="lazy" width="120" height="60" alt="captcha" class="w-16" />
+                                        <svg class="inline-block align-middle cursor-pointer w-9 h-9" onclick="refreshCaptchaContact()" width="24" height="24" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#18181B"/></svg>
+                                    </div>
+                                    
+                                </div></div></script>
+                            </face>
+                        </basis>
+                    </div>
+                    <button
+                        class="w-full mt-3 px-4 text-white transition-all duration-300 y-2 data-body-btn h-12 bg-primary-900 rounded-[40px] hover:bg-secondary-600"
+                        type="button" data-btn-uploadContact><span class="">ارسال</span></button>
+
+                </div>
+                <div
+                class="Loading_Form hidden data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5">
+                <div id="ballsWaveG" class="text-base font-normal leading-normal ext-zinc-50">
+                    <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                    <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                </div>
+            </div>
+                <div class="mt-4 text-center text-primary-600 message-api"></div>
+            </div>
+        </section>
+    </main>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"/>
+</body>
+</html>
