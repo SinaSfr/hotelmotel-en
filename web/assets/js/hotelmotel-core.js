@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("search-box");
             container.innerHTML = xhrobj.responseText;
   
+            let r = document.querySelector(".flighttype-field");
+            r.classList.add("flighttype-dropDown");
             const scripts = container.getElementsByTagName("script");
             for (let i = 0; i < scripts.length; i++) {
               const scriptTag = document.createElement("script");
@@ -132,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#contact-form-resize .Loading_Form").style.display =
         "none";
       document.querySelector("#contact-form-resize .message-api").innerHTML =
-        "درخواست شما با موفقیت ثبت شد.";
+        "Your request has been successfully submitted.";
     } else {
       refreshCaptchaContact();
       setTimeout(() => {
@@ -140,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "#contact-form-resize .Loading_Form"
         ).style.display = "none";
         document.querySelector("#contact-form-resize .message-api").innerHTML =
-          "خطایی رخ داده, لطفا مجدد اقدام کنید.";
+          "An error occurred, please try again.";
       }, 2000);
     }
   }
@@ -149,12 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var inputElementVisa7 = document.querySelector(
       " .about-form-message textarea[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "متن");
+    inputElementVisa7.setAttribute("placeholder", "Message");
   
     var inputElementVisa7 = document.querySelector(
       " .about-form-email input[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "ایمیل");
+    inputElementVisa7.setAttribute("placeholder", "Email");
   }
   
   //form suggest
@@ -188,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#suggest-form-resize .Loading_Form").style.display =
         "none";
       document.querySelector("#suggest-form-resize .message-api").innerHTML =
-        "درخواست شما با موفقیت ثبت شد.";
+        "Your request has been successfully submitted.";
   
       location.reload();
       z;
@@ -199,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "#suggest-form-resize .Loading_Form"
         ).style.display = "none";
         document.querySelector("#suggest-form-resize .message-api").innerHTML =
-          "خطایی رخ داده, لطفا مجدد اقدام کنید.";
+          "An error occurred, please try again.";
       }, 2000);
     }
   }
@@ -208,26 +210,26 @@ document.addEventListener("DOMContentLoaded", function () {
     var inputElementVisa7 = document.querySelector(
       " .left-form-message textarea[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "متن");
+    inputElementVisa7.setAttribute("placeholder", "Message");
   
     var inputElementVisa7 = document.querySelector(
       " .left-form-name input[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "نام و نام خانوادگی");
+    inputElementVisa7.setAttribute("placeholder", "Name");
   
     var inputElementVisa7 = document.querySelector(
       " .left-form-number input[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "شماره موبایل");
+    inputElementVisa7.setAttribute("placeholder", "Phone Number");
   
     var inputElementVisa7 = document.querySelector(
       " .left-form-payment input[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "شماره صورت حساب");
+    inputElementVisa7.setAttribute("placeholder", "invoice ");
   
     var inputElementVisa7 = document.querySelector(
       " .left-form-email input[data-bc-text-input]"
     );
-    inputElementVisa7.setAttribute("placeholder", "ایمیل");
+    inputElementVisa7.setAttribute("placeholder", "Email");
   }
   

@@ -1,4 +1,4 @@
-<basis core="dbsource" source="basiscore" name="db" mid="5" lid="1" usedforid="[##cms.cms.ownerid##]">
+<basis core="dbsource" source="basiscore" name="db" mid="5" lid="2" usedforid="[##cms.cms.ownerid##]">
     <member name="info" type="view" />
 </basis>
 <header class="header-landing-items mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
@@ -24,24 +24,24 @@
                     </div>
                 </div>
                 <div class="flex items-center h-full gap-7">
-                    <a href="/"><img src="[##cms.cms.cdn##]/images/main-logo.png" alt="logo-header" width="110" height="48"
+                    <a href="/"><img src="[##cms.cms.cdn##]/images/logo.png" alt="logo-header" width="110" height="48"
                             loading="lazy" class="hidden transition-all duration-300 lg:block hover:scale-90" /></a>
                     <nav class="hidden h-full lg:flex">
                         <ul class="flex items-center gap-6">
                             <li class="flex items-center h-full cursor-pointer landing-item" data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')">
                                 <span
                                     class="transition-all duration-300 text-zinc-900 hover:text-secondary-600 text-xl font-semibold">
-                                    هتل</span>
+                                    hotel</span>
                             </li>
                             <li class="flex items-center h-full cursor-pointer landing-item" data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')">
                                 <span
                                     class="flex items-center transition-all duration-300 text-zinc-900 hover:text-secondary-600 text-xl font-semibold">
-                                    پرواز</span>
+                                    flight</span>
                             </li>
                             <li class="relative flex items-center h-full group">
                                 <div
                                     class="flex items-center gap-2 cursor-pointer transition-all duration-300 h-full group text-zinc-900 hover:text-secondary-600 text-xl font-semibold">
-                                    بیشتر
+                                    more
                                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                                         class="transition-all duration-300 group-hover:rotate-180"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -56,12 +56,12 @@
                                     <li
                                         class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/leveltwo">
                                         <a href="/درباره-ما"
-                                            class="transition-all duration-300 block text-zinc-900  group-hover/leveltwo:text-white">درباره ما</a>
+                                            class="transition-all duration-300 block text-zinc-900  group-hover/leveltwo:text-white">About us</a>
                                     </li>
                                     <li
                                     class="py-1 px-2 transition-all duration-300 rounded-md hover:bg-primary-800 group/leveltwo">
                                     <a href="/تماس-با-ما"
-                                        class="transition-all duration-300 block text-zinc-900  group-hover/leveltwo:text-white">تماس با ما</a>
+                                        class="transition-all duration-300 block text-zinc-900  group-hover/leveltwo:text-white">Contact us</a>
                                 </li>
                                 </ul>
                                 <!-- submenu end -->
@@ -74,7 +74,7 @@
                     </nav>
                 </div>
             </div>
-            <a href="/"><img src="[##cms.cms.cdn##]/images/main-logo.png" alt="logo-header" width="76" height="34"
+            <a href="/"><img src="[##cms.cms.cdn##]/images/logo.png" alt="logo-header" width="76" height="34"
                     loading="lazy" class="transition-all duration-300 lg:hidden hover:scale-90" /></a>
         </div>
         <!-- header menu -->
@@ -82,7 +82,7 @@
             class="header-menu bg-white fixed z-30 translate-x-[1024px] lg:translate-x-0 lg:invisible lg:opacity-0 inset-0 w-full transition-all duration-300 overflow-scroll lg:absolute lg:inset-auto lg:shadow-md lg:right-0 lg:top-16 lg:w-60 lg:rounded lg:overflow-auto">
             <div>
                 <div class="flex items-center justify-between py-3 mx-auto w-[90%]">
-                    <a href="/"><img src="[##cms.cms.cdn##]/images/main-logo.png" alt="logo-header" width="94" height="34"
+                    <a href="/"><img src="[##cms.cms.cdn##]/images/logo.png" alt="logo-header" width="94" height="34"
                             loading="lazy" class="transition-all duration-300 hover:scale-105" /></a>
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
                         class="cursor-pointer header-menu-close" xmlns="http://www.w3.org/2000/svg">
@@ -95,13 +95,13 @@
             <div class="pb-5 bg-white w-[90%] mx-auto">
                 <nav class="pt-2">
                     <ul class="text-sm divide-y divide-primary-50">
-                        <li class="py-3 landing-item" data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"><span class="text-zinc-900">هتل</span></li>
+                        <li class="py-3 landing-item" data-id="hotel" data-nav="hotel" onclick="check_searchHistory('hotel'); check_landing('hotel')"><span class="text-zinc-900">hotel</span></li>
                         <li class="flex items-center py-3 landing-item" data-id="flight" data-nav="flight" onclick="check_searchHistory('flight'); check_landing('flight')">
-                            <span class="w-full text-zinc-900">پرواز</span>
+                            <span class="w-full text-zinc-900">flight</span>
                         </li>
                         <li class="">
                             <div class="flex items-center justify-between cursor-pointer toggle-dropdown">
-                                <span class="text-zinc-900 cursor-pointer">بیشتر</span>
+                                <span class="text-zinc-900 cursor-pointer">more</span>
                                 <svg width="48" class="transition-all duration-300 dropdown-icon" height="48"
                                     viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M31 20.5L24 27.5L17 20.5" stroke="#181C47" stroke-width="2"
@@ -111,8 +111,8 @@
                             <!-- submenu -->
                             <ul
                                 class="flex flex-col overflow-hidden transition-all duration-300 bg-white divide-y opacity-0 submenu divide-primary-50 max-h-0">
-                                <li class="px-10 py-2 "><a href="/درباره-ما" class="text-zinc-900">درباره ما</a></li>
-                                <li class="px-10 py-2 "><a href="/تماس-با-ما" class="text-zinc-900">تماس با ما</a></li>
+                                <li class="px-10 py-2 "><a href="/درباره-ما" class="text-zinc-900">About us</a></li>
+                                <li class="px-10 py-2 "><a href="/تماس-با-ما" class="text-zinc-900">Contact us</a></li>
                             </ul>
                             <!-- submenu end -->
                         </li>

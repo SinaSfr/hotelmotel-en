@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <!-- Title & Description -->
+    <title>[##cms.seo.title|(رزرو هتل - خرید بلیط هواپیما - هتل متل)##]
+    </title>
+    <meta name="description" content="[##cms.seo.description|(آژانس گردشگری هتل متل؛ تخصص در ارائه هتل های زیبا و به یاد ماندنی در کیش، اقامتگاه‌های لوکس ، و تجربه سفرهای به‌یادماندنی. با بهترین قیمت‌ها و خدمات VIP، سفری دلپذیر را تجربه کنید.)##]">
+    <!-- Title & Description -->
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <!-- pwa metatags -->
+    <basis core="call" file="pwa.inc" />
+    <!-- common styles for all page -->
+    <basis core="call" file="style.inc" />
+</head>
+
+<body>
+    <basis core="call" file="header.inc" />
+    <main>
+        <div class="relative my-24 py-36 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
+            <img src="[##cms.cms.cdn##]/images/elipsis-tr.png" class="absolute top-0 right-0" alt="logo-about" width="573" height="276">
+            <svg width="241" height="227" class="absolute top-0 left-0 -z-10">
+                <use xlink:href="./images/sprite-icons.svg#icon-elipsis-tl"></use>
+            </svg>
+            <svg width="234" height="231" class="absolute bottom-0 right-0 -z-10">
+                <use xlink:href="./images/sprite-icons.svg#icon-elipsis-br"></use>
+            </svg>
+            <svg width="95" height="94" class="absolute bottom-0 left-0 -z-10">
+                <use xlink:href="./images/sprite-icons.svg#icon-elipsis-bl"></use>
+            </svg>
+            <section class="">
+                <div><img src="[##cms.cms.cdn##]/images/main-logo.png" class="" alt="logo-about" width="185" height="89" loading="lazy">
+                </div>
+                <div class="mt-4">
+                    <h1 class="text-zinc-900 text-3xl font-bold mb-3">درباره ما</h1>
+                    <basis core="print" datamembername="db.info">
+                        <face filter="TypeID in(144)">
+                            <div class="text-primary-900 text-lg text-justify">
+                                @largetext
+                            </div>
+                        </face>
+                    </basis>
+                </div>
+                <div class="flex justify-between mt-9">
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
+                            <svg width="66" height="65" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-about-calender"></use>
+                            </svg>
+                        </div>
+                        <h2 class="text-zinc-900 font-bold text-xl">قیمت‌های رقابتی</h2>
+                        <h3 class="text-primary-900 text-center">قیمت‌های رقابتی و تضمين بهترين نرخ‌های پروازی</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
+                            <svg width="66" height="65" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-about-coin"></use>
+                            </svg>
+                        </div>
+                        <h2 class="text-zinc-900 font-bold text-xl">پشتیبانی ۲۴ ساعته</h2>
+                        <h3 class="text-primary-900 text-center">پشتیبانی ۲۴ ساعته در تمامی مراحل رزرو</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
+                            <svg width="66" height="65" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-headphone"></use>
+                            </svg>
+                        </div>
+                        <h2 class="text-zinc-900 font-bold text-xl">خدمات اختصاصی</h2>
+                        <h3 class="text-primary-900 text-center">ارائه پکیج‌های گردشگری ویژه با خدمات اختصاصی</h3>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
+                            <svg width="66" height="65" class="flex-shrink-0">
+                                <use xlink:href="./images/sprite-icons.svg#icon-network"></use>
+                            </svg>
+                        </div>
+                        <h2 class="text-zinc-900 font-bold text-xl">کوتاه‌ترین زمان</h2>
+                        <h3 class="text-primary-900 text-center">امکان رزرو بهترین هتل‌ها در کوتاه‌ترین زمان</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <basis core="call" file="footer.inc" />
+</body>
+
+</html>

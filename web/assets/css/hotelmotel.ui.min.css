@@ -144,6 +144,10 @@
   margin-right: 0.25rem;
 }
 
+.mr-9 {
+  margin-right: 2.25rem /* 36px */;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -541,6 +545,10 @@
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-9 {
+  padding-left: 2.25rem /* 36px */;
 }
 
 .pr-3 {
@@ -949,6 +957,10 @@
   height: auto;
 }
 
+.Basis_Calendar{
+  font-family: "YekanBakh" !important
+}
+
 .Basis_Calendar .selected_date {
   background: var(--secondary) !important;
 }
@@ -994,6 +1006,7 @@
 }
 .Basis_Calendar_Box {
   font-family: "YekanBakh" !important;
+  margin-top: 1rem;
 }
 .calendar-apply-date,
 .calendar-switch,
@@ -1124,7 +1137,7 @@
   height: 56px !important;
   position: absolute !important;
   top: 17px;
-  left: 1rem;
+  right: 1rem;
   background-color: #fff;
   border-radius: 12px;
 }
@@ -1303,7 +1316,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  left: -26px !important;
+  left: 187px !important;
   top: 8px !important;
 }
 
@@ -1314,6 +1327,10 @@
 
 .reserve-search {
   height: 64px !important;
+  width: auto !important;
+}
+
+.multiroute-fields > .reserve-field {
   width: auto !important;
 }
 
@@ -1458,12 +1475,14 @@
   height: 24px !important;
 }
 
-.flighttype-field-icon{
+.flighttype-field-icon {
   display: block !important;
+  right: 0;
 }
 .flighttype-field-icon svg{
   height: 48px !important;
   margin-top: 0 !important;
+  margin-right: 0.5rem;
 }
 
 .reserve-location.form-search-input{
@@ -1618,6 +1637,7 @@
   border-radius: 8px !important;
   border: none !important;
   font-size: 16px !important;
+  direction: ltr;
 }
 .contact-form [data-bc-answer-container] textarea {
   background-color: white !important;
@@ -1629,6 +1649,7 @@
   border-radius: 8px !important;
   border: none !important;
   font-size: 16px !important;
+  direction: ltr;
 }
 .contact-form [data-bc-schema-direction="rtl"] [data-bc-part-container] {
   width: 100%;
@@ -1684,6 +1705,7 @@
   border-radius: 8px !important;
   border: none !important;
   font-size: 16px !important; 
+  direction: ltr;
 }
 .suggest-form [data-bc-answer-container]  textarea {
   background-color: white !important;
@@ -1695,6 +1717,7 @@
   border-radius: 8px !important;
   border: none !important;
   font-size: 16px !important;
+  direction: ltr;
 }
 .suggest-form [data-bc-answer-container] select{
   background-color: white !important;
@@ -1706,6 +1729,7 @@
   border-radius: 8px !important;
   border: none !important;
   font-size: 16px !important; 
+  direction: ltr;
 }
 .suggest-form [data-bc-schema-direction="rtl"] [data-bc-part-container] {
   width: 100%;
@@ -1731,6 +1755,7 @@
 }
 .suggest-form fieldset:nth-child(2) legend {
   margin-bottom: 8px;
+  float: left;
 }
 
 .suggest-form fieldset:first-of-type {
