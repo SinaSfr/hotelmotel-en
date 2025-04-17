@@ -67,8 +67,8 @@
                         <use xlink:href="./images/sprite-icons.svg#icon-plane"></use>
                     </svg>
                     <div class="flex flex-col gap-1">
-                        <h2 class="text-lg font-bold text-primary-900">سفری ایمن</h2>
-                        <h3 class="text-sm text-primary-300"> سفر امن و بدون دردسر </h3>
+                        <h2 class="text-lg font-bold text-primary-900">Safe Travels</h2>
+                        <h3 class="text-sm text-primary-300">A Smooth and Hassle-Free Journey</h3>
                     </div>
                 </div>
                 <div class="flex items-center gap-2">
@@ -76,8 +76,8 @@
                         <use xlink:href="./images/sprite-icons.svg#icon-list"></use>
                     </svg>
                     <div class="flex flex-col gap-1">
-                        <h2 class="text-lg font-bold text-primary-900">پیگیری خرید</h2>
-                        <h3 class="text-sm text-primary-300">بهترین و ارزانترین هتل ها</h3>
+                        <h2 class="text-lg font-bold text-primary-900">Order Tracking</h2>
+                        <h3 class="text-sm text-primary-300">The Best and Most Affordable Hotels</h3>
                     </div>
                 </div>
                 <div class="flex items-center gap-2">
@@ -85,8 +85,8 @@
                         <use xlink:href="./images/sprite-icons.svg#icon-coin"></use>
                     </svg>
                     <div class="flex flex-col gap-1">
-                        <h2 class="text-lg font-bold text-primary-900">بهترین نرخ</h2>
-                        <h3 class="text-sm text-primary-300">مناسب ترین قیمت</h3>
+                        <h2 class="text-lg font-bold text-primary-900">The Best Rates</h2>
+                        <h3 class="text-sm text-primary-300">The Most Affordable Prices</h3>
                     </div>
                 </div>
                 <div class="flex items-center gap-2">
@@ -94,60 +94,46 @@
                         <use xlink:href="./images/sprite-icons.svg#icon-headphone"></use>
                     </svg>
                     <div class="flex flex-col gap-1">
-                        <h2 class="text-lg font-bold text-primary-900">پشتیبانی 24 ساعته</h2>
-                        <h3 class="text-sm text-primary-300"> تیم پشتیبـانی آماده</h3>
+                        <h2 class="text-lg font-bold text-primary-900">24/7 Support</h2>
+                        <h3 class="text-sm text-primary-300">A Ready and Reliable Support Team</h3>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8">
-            <basis core="tree" datamembername="slogan-list.cat" idcol="catid" parentidcol="parentid"
-            nullvalue="213901">
-                <layout>
+        <section class="mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8 mb-20">
                     <div class="grid grid-cols-3 gap-3">
-                        @child
+                        <div class="relative flex items-center justify-end rounded-3xl overflow-hidden">
+                            <div class="absolute w-[54%] ml-4 left-0 top-12">
+                                <h2 class="text-primary-900 mb-2 text-xl font-bold">Enjoy the Journey with Motel Hotel</h2>
+                                <div class="text-sm text-zinc-900 mb-4">
+                                    Purchasing Airline Tickets with Services Like Credit Payment Options
+                                </div>
+                            </div>
+                            <img src="[##cms.cms.cdn##]/images/slogan-img1.jpg" class="h-52" alt="slogan-img" width="100%"
+                                height="208" loading="lazy">
+                        </div>
+                            <div class="relative flex items-center justify-end rounded-3xl overflow-hidden">
+                                <div class="absolute w-[54%] ml-4 left-0 top-12">
+                                    <h2 class="text-primary-900 mb-2 text-xl font-bold">Purchase an International Flight Ticket Now!</h2>
+                                    <div class="text-sm text-zinc-900 mb-4">
+                                        Top Global Flights with Exciting Rates 
+                                    </div>
+                                </div>
+                                <img src="[##cms.cms.cdn##]/images/slogan-img2.jpg" class="h-52" alt="slogan-img" width="100%"
+                                    height="208" loading="lazy">
+                            </div>
+                            <div class="relative flex items-center justify-end rounded-3xl overflow-hidden">
+                                <div class="absolute w-[54%] ml-4 left-0 top-12">
+                                    <h2 class="text-primary-900 mb-2 text-xl font-bold">Book Your Hotel Now!</h2>
+                                    <div class="text-sm text-zinc-900 mb-4">
+                                        Book the Finest Domestic and International Hotels
+                                    </div>
+                                </div>
+                                <img src="[##cms.cms.cdn##]/images/slogan-img3.jpg" class="h-52" alt="slogan-img" width="100%"
+                                    height="208" loading="lazy">
+                            </div>
                     </div>
-                </layout>
-                <face filter="link is null">
-                    <a href="/article-list.bc?catid=@catid" class="relative flex items-center justify-end rounded-3xl overflow-hidden">
-                        <div class="absolute w-[54%] ml-4">
-                            <h2 class="text-primary-900 mb-2 text-xl font-bold">@title</h2>
-                            <div class="text-sm text-zinc-900 mb-4">
-                                @urldescription 
-                            </div>
-                            <span
-                                class="flex items-center justify-center w-32 h-10 text-sm text-white font-bold bg-primary-900 rounded-[40px] transition-all duration-300 hover:bg-secondary-600">رزرو
-                                کنید
-                                <svg width="24" height="24" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-chevron-left-white"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <img src="@image" class="h-52" alt="@title" width="100%"
-                            height="208" loading="lazy">
-                    </a>
-                </face>
-                <face>
-                    <a href="@link" class="relative flex items-center justify-end rounded-3xl overflow-hidden">
-                        <div class="absolute w-[54%] ml-4">
-                            <h2 class="text-primary-900 mb-2 text-xl font-bold">@title</h2>
-                            <div class="text-sm text-zinc-900 mb-4">
-                                @urldescription 
-                            </div>
-                            <span
-                                class="flex items-center justify-center w-32 h-10 text-sm text-white font-bold bg-primary-900 rounded-[40px] transition-all duration-300 hover:bg-secondary-600">رزرو
-                                کنید
-                                <svg width="24" height="24" class="flex-shrink-0">
-                                    <use xlink:href="./images/sprite-icons.svg#icon-chevron-left-white"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <img src="@image" class="h-52" alt="@title" width="100%"
-                            height="208" loading="lazy">
-                    </a>
-                </face>
-            </basis>
-  
+
         </section>
   
     </main>

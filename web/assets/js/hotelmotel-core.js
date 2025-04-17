@@ -14,46 +14,50 @@ document.addEventListener("DOMContentLoaded", function () {
       return requiredFiles.every((file) => loadedFiles.includes(file));
     }
   
-    function fetchEngine() {
-      try {
-        const xhrobj = new XMLHttpRequest();
-        xhrobj.open("GET", "search-engine.bc");
-        xhrobj.send();
-  
-        xhrobj.onreadystatechange = function () {
-          if (this.readyState == 4 && this.status == 200) {
-            const container = document.getElementById("search-box");
-            container.innerHTML = xhrobj.responseText;
-  
-            let r = document.querySelector(".flighttype-field");
-            r.classList.add("flighttype-dropDown");
-            const scripts = container.getElementsByTagName("script");
-            for (let i = 0; i < scripts.length; i++) {
-              const scriptTag = document.createElement("script");
-              if (scripts[i].src) {
-                scriptTag.src = scripts[i].src;
-                scriptTag.async = false;
-              } else {
-                scriptTag.text = scripts[i].textContent;
+    if(document.getElementById("search-box")){
+      function fetchEngine() {
+        try {
+          const xhrobj = new XMLHttpRequest();
+          xhrobj.open("GET", "search-engine.bc");
+          xhrobj.send();
+    
+          xhrobj.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              const container = document.getElementById("search-box");
+              container.innerHTML = xhrobj.responseText;
+    
+              let r = document.querySelector(".flighttype-field");
+              r.classList.add("flighttype-dropDown");
+              const scripts = container.getElementsByTagName("script");
+              for (let i = 0; i < scripts.length; i++) {
+                const scriptTag = document.createElement("script");
+                if (scripts[i].src) {
+                  scriptTag.src = scripts[i].src;
+                  scriptTag.async = false;
+                } else {
+                  scriptTag.text = scripts[i].textContent;
+                }
+                document.head.appendChild(scriptTag).parentNode.removeChild(scriptTag);
               }
-              document.head.appendChild(scriptTag).parentNode.removeChild(scriptTag);
             }
-          }
-        };
-      } catch (error) {
-        console.error("A problem has occurred. Please be patient.", error);
+          };
+        } catch (error) {
+          console.error("A problem has occurred. Please be patient.", error);
+        }
       }
+
+      function waitForFiles() {
+        if (checkAllResourcesLoaded()) {
+          fetchEngine();
+        } else {
+          setTimeout(waitForFiles, 500);
+        }
+      }
+      waitForFiles();
     }
   
-    function waitForFiles() {
-      if (checkAllResourcesLoaded()) {
-        fetchEngine();
-      } else {
-        setTimeout(waitForFiles, 500);
-      }
-    }
+
   
-    waitForFiles();
   });
 
   
