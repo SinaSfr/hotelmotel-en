@@ -516,21 +516,21 @@
 </symbol>  
 
 <symbol id="engine-departurecalendar-icon" viewBox="0 0 48 48" fill="none">
-<path d="M29.0852 21.6035H20.5891" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M21.1985 15V17.5764" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.4702 15V17.5764" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21.0235 16.4219H28.6439C31.2875 16.4219 32.9377 17.894 32.9377 20.5998V28.7456C32.9377 31.4943 31.2875 33.0004 28.6439 33.0004H21.0313C18.38 33.0004 16.7376 31.5205 16.7376 28.8137V20.5998C16.7298 17.894 18.3722 16.4219 21.0235 16.4219Z" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.2222 27.2607H21.4231" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M26.1887 29.185L28.2534 27.2605L26.1887 25.3359" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</symbol>   
-<symbol id="engine-returncalendar-icon" viewBox="0 0 48 48" fill="none">
-<path d="M20.3359 21.457H28.832" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M20.3359 21.457H28.832" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M28.2227 15V17.5764" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M20.9531 15V17.5764" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M21.1836 27.2607H27.9828" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M23.2327 29.185L21.168 27.2605L23.2327 25.3359" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M28.3985 16.4219C31.0498 16.4219 32.6922 17.894 32.6844 20.5998V28.8137C32.6844 31.5205 31.0421 33.0004 28.3907 33.0004H20.7781C18.1345 33.0004 16.4844 31.4943 16.4844 28.7456V20.5998C16.4844 18.869 17.1596 17.643 18.338 16.9842" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M20.959 16.4219H25.6652" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>   
+<symbol id="engine-returncalendar-icon" viewBox="0 0 48 48" fill="none">
+<path d="M29.0852 21.6035H20.5891" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.1985 15V17.5764" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.4702 15V17.5764" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.0235 16.4219H28.6439C31.2875 16.4219 32.9377 17.894 32.9377 20.5998V28.7456C32.9377 31.4943 31.2875 33.0004 28.6439 33.0004H21.0313C18.38 33.0004 16.7376 31.5205 16.7376 28.8137V20.5998C16.7298 17.894 18.3722 16.4219 21.0235 16.4219Z" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M28.2222 27.2607H21.4231" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.1887 29.185L28.2534 27.2605L26.1887 25.3359" stroke="#CBB06B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>   
 
 <symbol id="engine-passenger-icon" viewBox="0 0 25 24" fill="none">

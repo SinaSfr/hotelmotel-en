@@ -538,6 +538,18 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.7%, #000000 91.96%);
 }
 
+.h1-tag{
+  position: absolute;
+  width: 1px;
+  padding: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
 .mask-image {
   -webkit-mask-image: url(../images/mask-shape.svg);
   mask-image: url(../images/mask-shape.svg);
@@ -695,14 +707,15 @@ body {
 }
 
 .reservation-item {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .reservation-item li {
   height: auto !important;
   padding: 0;
+  flex-basis: 26%;
 }
 
 .reservation-item li:hover {
@@ -715,6 +728,7 @@ body {
 
 .reserve-btn {
   display: flex !important;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   margin: 0 !important;
@@ -808,6 +822,7 @@ body {
 #backtoback,
 #multi {
   padding: 8px !important;
+  text-align: left;
 }
 #oneway:hover,
 #backtoback:hover,
@@ -910,7 +925,7 @@ body {
   height: 56px !important;
   position: absolute !important;
   top: 17px;
-  left: 1rem;
+  right: 1rem;
   background-color: #fff;
   border-radius: 12px;
 }
@@ -920,7 +935,7 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   width: 100%;
-  padding: 0 12px 0 0;
+  padding: 0 0 0 12px;
 }
 .reserve-field.flightclass-field .down-icon {
   margin-top: 0;
@@ -1088,7 +1103,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 12px !important;
+  right: 12px !important;
   top: 44px !important;
 }
 
@@ -1132,9 +1147,9 @@ body {
   div.border-type-1.h-full.rounded-type-1.px-2:first-child {
   display: flex;
   align-items: center;
-  gap: 12px;
   padding: 0 8px 0 0 !important;
 }
+
 
 .reserve-field.passengers-field label[for="passenger1"] span,
 .reserve-field.passengers-field label[for="passenger8"] span {
@@ -1143,9 +1158,10 @@ body {
 
 .reserve-field.passengers-field label[for="passenger1"] svg,
 .reserve-field.passengers-field label[for="passenger8"] svg {
-  width: 24px;
+  width: 48px;
   height: 24px;
 }
+
 
 .reserve-field.passengers-field label .down-icon {
   display: none;
@@ -1180,7 +1196,7 @@ body {
 
 .multicity-flight-form .route-minus-btn {
   top: 0;
-  left: 0;
+  right: 0 !important;
   width: auto !important;
   position: absolute;
   display: flex;
@@ -1241,6 +1257,7 @@ body {
 
 .flighttype-field-icon{
   display: block !important;
+  right: 0 !important;
 }
 .flighttype-field-icon svg{
   height: 48px !important;
@@ -1264,7 +1281,7 @@ body {
 .FlightClass.hidden-box li {
   line-height: 2rem;
   font-size: 1rem;
-  text-align: right;
+  text-align: left;
   display: block;
   margin: 5px 0;
   border: unset;
@@ -1329,7 +1346,7 @@ body {
 }
 
 .plus-count span {
-  font-size: 19px;
+  font-size: 23px;
   padding-top: 0.25rem;
   color: white;
 }

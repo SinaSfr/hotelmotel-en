@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const isDesktop = window.innerWidth > 1024;
     const requiredFiles = isDesktop
       ? ["hotelmotel.ui.min.css"]
-      : ["hotelmotel-mob.ui.css"];
+      : ["hotelmotel-mob.ui.min.css"];
   
     function checkAllResourcesLoaded() {
       const resources = performance.getEntriesByType("resource");
@@ -60,7 +60,47 @@ document.addEventListener("DOMContentLoaded", function () {
   
   });
 
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const isHomePage = window.location.pathname === "/"; 
+    const isNotHome = !isHomePage;
   
+    const flightItem = document.querySelector('li[data-id="flight"]');
+    const hotelItem = document.querySelector('li[data-id="hotel"]');
+  
+    if (isNotHome) {
+      if (flightItem) {
+        flightItem.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "/flight"; 
+        });
+      }
+  
+      if (hotelItem) {
+        hotelItem.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "/hotel"; 
+        });
+      }
+    } 
+    else {
+      if (flightItem) {
+        flightItem.addEventListener("click", function () {
+          check_searchHistory('flight');
+          check_landing('flight');
+        });
+      }
+  
+      if (hotelItem) {
+        hotelItem.addEventListener("click", function () {
+          check_searchHistory('hotel');
+          check_landing('hotel');
+        });
+      }
+    }
+  });
+  
+
   const headerMenu = document.querySelector(".header-menu");
   const headerMenuClose = document.querySelector(".header-menu-close");
   const bars3 = document.querySelector(".bars3");
@@ -78,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   } else {
     headerMenuClose.addEventListener("click", function () {
-      headerMenu.style.transform = "translateX(1024px)";
+      headerMenu.style.transform = "translateX(-1024px)";
     });
     bars3.addEventListener("click", function () {
       headerMenu.style.transform = "translateX(0)";

@@ -548,11 +548,11 @@ object {
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-img,
+/* img,
 video {
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
-}
+} */
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
@@ -649,6 +649,10 @@ body {
   display: none;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-12 {
   height: 3rem;
 }
@@ -699,6 +703,11 @@ body {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.translate-x-\[-1024px\] {
+  --tw-translate-x: -1024px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .translate-x-\[1024px\] {
@@ -1137,6 +1146,10 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y))
     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
     scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:text-secondary-600 {
+  color: var(--secondary-600);
 }
 
 .group:hover .group-hover\:stroke-secondary-600 {
