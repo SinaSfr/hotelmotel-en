@@ -176,6 +176,10 @@ body {
   height: 3.75rem;
 }
 
+.h-16 {
+  height: 4rem /* 64px */;
+}
+
 .h-36 {
   height: 9rem;
 }
@@ -921,7 +925,7 @@ body {
 }
 
 .reserve-field.flightclass-field {
-  width: 113px !important;
+  width: 160px !important;
   height: 56px !important;
   position: absolute !important;
   top: 17px;

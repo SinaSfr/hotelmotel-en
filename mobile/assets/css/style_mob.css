@@ -297,8 +297,10 @@
   filter: unset;
 }
 .col2-second-part-header img {
-  width: auto;
   height: 45px;
+  margin-top: 3px;
+  height: 45px;
+  object-fit: cover;
   margin-top: 3px;
 }
 .mm-spn--open {
@@ -345,7 +347,7 @@ button {
 }
 html,
 html body {
-  font-family: inherit;
+  font-family: "Yekanbakh";
 }
 .currency-selected::after {
   font-size: 15px;

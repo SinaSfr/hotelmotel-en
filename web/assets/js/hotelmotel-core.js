@@ -109,21 +109,27 @@ document.addEventListener("DOMContentLoaded", function () {
     headerMenuClose.addEventListener("click", function () {
       headerMenu.style.visibility = "hidden";
       headerMenu.style.opacity = "0";
-      // headerMenu.style.display = "none";
+      document.body.classList.remove("overflow-hidden");
     });
+  
     bars3.addEventListener("click", function () {
       headerMenu.style.visibility = "visible";
       headerMenu.style.opacity = "1";
-      // headerMenu.style.display = "block";
+      document.body.classList.add("overflow-hidden");
     });
   } else {
     headerMenuClose.addEventListener("click", function () {
       headerMenu.style.transform = "translateX(-1024px)";
+      document.body.classList.remove("overflow-hidden");
     });
+  
     bars3.addEventListener("click", function () {
       headerMenu.style.transform = "translateX(0)";
+      document.body.classList.add("overflow-hidden");
     });
   }
+  
+  
   
   document.addEventListener("DOMContentLoaded", function () {
     const toggleDropdowns = document.querySelectorAll(".toggle-dropdown");
@@ -237,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "Your request has been successfully submitted.";
   
       location.reload();
-      z;
+
     } else {
       refreshCaptchaSuggest();
       setTimeout(() => {

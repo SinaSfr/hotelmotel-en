@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
     <!-- Title & Description -->
-    <title>[##cms.seo.title|(رزرو هتل - خرید بلیط هواپیما - هتل متل)##]
+    <title>[##cms.seo.title|(otelMotel | Discover the Best Travel Deals – Book Hotels and Flights in Seconds!)##]
     </title>
-    <meta name="description" content="[##cms.seo.description|(آژانس گردشگری هتل متل؛ تخصص در ارائه هتل های زیبا و به یاد ماندنی در کیش، اقامتگاه‌های لوکس ، و تجربه سفرهای به‌یادماندنی. با بهترین قیمت‌ها و خدمات VIP، سفری دلپذیر را تجربه کنید.)##]">
+    <meta name="description" content="[##cms.seo.description|(Hotel Motel)##]">
     <!-- Title & Description -->
     <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
         <member type="list" name="list" request="taglist" preview=""></member>
@@ -21,19 +21,19 @@
         </face>
     </basis>
     <!-- pwa metatags -->
-    <basis core="call" file="pwa.inc" lid="2"/>
+    <basis core="call" file="pwa.inc" lid="2" />
     <!-- common styles for all page -->
-    <basis core="call" file="style.inc" lid="2"/>
+    <basis core="call" file="style.inc" lid="2" />
 </head>
 
 <body>
-    <basis core="call" file="header.inc" lid="2"/>
+    <basis core="call" file="header.inc" lid="2" />
     <main>
         <div class="relative my-24 py-36 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl">
-            <img src="[##cms.cms.cdn##]/images/elipsis-tr.png" class="absolute top-0 right-0" alt="logo-about" width="573" height="276">
-            <svg width="241" height="227" class="absolute top-0 left-0 -z-10">
-                <use xlink:href="./images/sprite-icons.svg#icon-elipsis-tl"></use>
-            </svg>
+            <img src="[##cms.cms.cdn##]/images/elipsis-tr.png" class="absolute top-0 left-0" alt="logo-about"
+                width="573" height="276">
+            <img src="[##cms.cms.cdn##]/images/ellipse.png" class="h-auto object-cover absolute top-0 right-0 -z-10"
+                alt="ellipse" width="241" height="227" loading="lazy">
             <svg width="234" height="231" class="absolute bottom-0 right-0 -z-10">
                 <use xlink:href="./images/sprite-icons.svg#icon-elipsis-br"></use>
             </svg>
@@ -41,7 +41,8 @@
                 <use xlink:href="./images/sprite-icons.svg#icon-elipsis-bl"></use>
             </svg>
             <section class="">
-                <div><img src="[##cms.cms.cdn##]/images/logo.png" class="" alt="logo-about" width="185" height="89" loading="lazy">
+                <div><img src="[##cms.cms.cdn##]/images/logo.png" class="object-cover h-24" alt="logo-about" width="185" height="89"
+                        loading="lazy">
                 </div>
                 <div class="mt-4">
                     <h1 class="text-zinc-900 text-3xl font-bold mb-3">About us</h1>
@@ -61,7 +62,8 @@
                             </svg>
                         </div>
                         <h2 class="text-zinc-900 font-bold text-xl">Competitive Prices</h2>
-                        <h3 class="text-primary-900 text-center">Competitive Rates with a Guarantee of the Best Flight Deals</h3>
+                        <h3 class="text-primary-900 text-center">Competitive Rates with a Guarantee of the Best Flight
+                            Deals</h3>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
@@ -70,7 +72,8 @@
                             </svg>
                         </div>
                         <h2 class="text-zinc-900 font-bold text-xl">24/7 Support</h2>
-                        <h3 class="text-primary-900 text-center">Round-the-Clock Assistance at Every Step of Your Booking Process</h3>
+                        <h3 class="text-primary-900 text-center">Round-the-Clock Assistance at Every Step of Your
+                            Booking Process</h3>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
@@ -79,7 +82,8 @@
                             </svg>
                         </div>
                         <h2 class="text-zinc-900 font-bold text-xl">Exclusive Services</h2>
-                        <h3 class="text-primary-900 text-center">Offering Special Tourism Packages with Tailored Services</h3>
+                        <h3 class="text-primary-900 text-center">Offering Special Tourism Packages with Tailored
+                            Services</h3>
                     </div>
                     <div class="flex flex-col items-center">
                         <div class="flex items-center justify-center bg-secondary-50 rounded-full w-36 h-36 mb-2">
@@ -88,13 +92,14 @@
                             </svg>
                         </div>
                         <h2 class="text-zinc-900 font-bold text-xl">Shortest Time</h2>
-                        <h3 class="text-primary-900 text-center">Reserve the Best Hotels in the Least Amount of Time</h3>
+                        <h3 class="text-primary-900 text-center">Reserve the Best Hotels in the Least Amount of Time
+                        </h3>
                     </div>
                 </div>
             </section>
         </div>
     </main>
-    <basis core="call" file="footer.inc" lid="2"/>
+    <basis core="call" file="footer.inc" lid="2" />
 </body>
 
 </html>

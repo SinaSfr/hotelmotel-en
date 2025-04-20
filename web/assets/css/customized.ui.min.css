@@ -653,6 +653,10 @@ body {
   height: auto;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .h-12 {
   height: 3rem;
 }
