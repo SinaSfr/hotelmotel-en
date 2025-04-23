@@ -242,7 +242,10 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#suggest-form-resize .message-api").innerHTML =
         "Your request has been successfully submitted.";
   
-      location.reload();
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
+
 
     } else {
       refreshCaptchaSuggest();

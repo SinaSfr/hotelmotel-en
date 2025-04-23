@@ -1708,6 +1708,9 @@ div.border-type-1.h-full.rounded-type-1.px-2:first-child{
   padding: 0 !important;
 }
 
+.contact-form [data-bc-validation-part]{
+  direction: ltr !important;
+}
 
 .contact-form [data-bc-part] {
   margin-bottom: 0 !important;
@@ -1798,4 +1801,8 @@ div.border-type-1.h-full.rounded-type-1.px-2:first-child{
 
 .suggest-form [data-bc-question]:nth-child(2){
   margin-bottom: 0 !important;
+}
+
+.suggest-form [data-bc-validation-part]{
+  direction: ltr !important;
 }

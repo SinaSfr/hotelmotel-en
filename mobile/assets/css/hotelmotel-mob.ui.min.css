@@ -1469,6 +1469,9 @@ body {
   padding: 0 !important;
 }
 
+.contact-form [data-bc-validation-part]{
+  direction: ltr !important;
+}
 
 .contact-form [data-bc-part] {
   margin-bottom: 0 !important;
@@ -1565,4 +1568,8 @@ body {
 
 .suggest-form [data-bc-section-title]{
   float: left;
+}
+
+.suggest-form [data-bc-validation-part]{
+  direction: ltr !important;
 }
