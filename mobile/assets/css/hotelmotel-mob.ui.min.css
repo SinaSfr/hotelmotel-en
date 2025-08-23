@@ -1,6 +1,6 @@
 @import url(./customized.ui.min.css);
 body {
-  font-family: "YekanBakh";
+  font-family: 'YekanBakh';
 }
 
 .container {
@@ -254,15 +254,11 @@ body {
 
 .rotate-180 {
   --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -542,7 +538,7 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.7%, #000000 91.96%);
 }
 
-.h1-tag{
+.h1-tag {
   position: absolute;
   width: 1px;
   padding: 0;
@@ -604,7 +600,7 @@ body {
   animation: rotation 2s linear infinite;
 }
 .loader::after {
-  content: "";
+  content: '';
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -639,40 +635,49 @@ body {
 }
 
 .drop-shadow-\[2px_4px_6px_rgba\(0\2c 0\2c 0\2c 0\.9\)\] {
-  --tw-drop-shadow: drop-shadow(2px 4px 6px rgba(0,0,0,0.9));
+  --tw-drop-shadow: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.9));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .loader-fetch {
   width: 48px;
   height: 48px;
-  border:10px solid #FFF;
+  border: 10px solid #fff;
   border-radius: 50%;
   position: relative;
-  transform:rotate(45deg);
+  transform: rotate(45deg);
   box-sizing: border-box;
 }
 .loader-fetch::before {
-  content: "";
+  content: '';
   position: absolute;
   box-sizing: border-box;
-  inset:-10px;
+  inset: -10px;
   border-radius: 50%;
-  border:10px solid #8e7430;
+  border: 10px solid #8e7430;
   animation: prixClipFix 2s infinite linear;
 }
 
 @keyframes prixClipFix {
-    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
-    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 }
-  
 
 .r-flighthotel.module-form {
-  padding: 81px 16px 8px 16px;
+  padding: 81px 16px 8px 16px !important;
 }
 .r-hotel.module-form,
 .r-tour.module-form,
@@ -711,7 +716,7 @@ body {
 }
 
 .reservation-item {
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   flex-wrap: wrap;
 }
@@ -741,7 +746,7 @@ body {
   padding-left: 0 !important;
 }
 
-.reserve-btn .module-name{
+.reserve-btn .module-name {
   display: none !important;
 }
 .reserve-btn.active-module .module-name {
@@ -749,7 +754,7 @@ body {
 }
 .reserve-field.departure-route,
 .reserve-field.destination-route,
-.Basis_Date_Box{
+.Basis_Date_Box {
   margin-bottom: 0.25rem !important;
 }
 
@@ -786,10 +791,7 @@ body {
 .Basis_Calendar .current_day::after {
   border-color: var(--secondary) transparent transparent;
 }
-.Basis_Calendar
-  .month_day_list
-  table
-  td:not(.disable_day, .empty_day, .expire_day):hover {
+.Basis_Calendar .month_day_list table td:not(.disable_day, .empty_day, .expire_day):hover {
   border-color: var(--primary);
 }
 .Basis_Calendar .current_day {
@@ -797,17 +799,21 @@ body {
   color: #fff !important;
 }
 .Basis_Calendar_Box {
-  font-family: "YekanBakh" !important;
+  font-family: 'YekanBakh' !important;
 }
 .calendar-apply-date,
 .calendar-switch,
 .calendar-today,
 .calendar-footer input::placeholder {
-  font-family: "YekanBakh" !important;
+  font-family: 'YekanBakh' !important;
 }
 .calendar-footer input,
 .calendar-footer ::placeholder {
-  font-family: "YekanBakh";
+  font-family: 'YekanBakh';
+}
+
+.en-calendar .Basis_Calendar{
+  font-family: 'YekanBakh' !important;
 }
 
 .active-module {
@@ -862,12 +868,12 @@ body {
   color: #242453 !important;
 }
 
-.passenger-counts.passenger-count{
+.passenger-counts.passenger-count {
   padding-top: 0.25rem;
 }
 
 .section_prev_month svg,
-.section_next_month svg{
+.section_next_month svg {
   width: 28px !important;
   height: 28px !important;
 }
@@ -899,7 +905,7 @@ body {
 .flighttype-field.flighttype-dropDown span {
   margin-bottom: 0;
 }
-.flighttype-field.flighttype-dropDown .flighttype-dropDown-text{
+.flighttype-field.flighttype-dropDown .flighttype-dropDown-text {
   line-height: 3.25rem;
 }
 
@@ -992,7 +998,7 @@ body {
   padding-top: 0 !important;
 }
 
-.reserve-field.flightclass-field svg:first-of-type {
+.reserve-field.flightclass-field label svg:first-of-type {
   display: none;
 }
 
@@ -1029,7 +1035,7 @@ body {
 .search-box-container input,
 .search-box-container select,
 .search-box-container button {
-  font-family: "YekanBakh" !important;
+  font-family: 'YekanBakh' !important;
 }
 
 .search-box-container label {
@@ -1116,6 +1122,18 @@ body {
   height: 18px !important;
 }
 
+.confirm-passenger {
+  width: 100%;
+  height: 48px !important;
+  margin-top: 2rem;
+  background: var(--secondary-600);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+}
+
 .reserve-search {
   height: 64px !important;
 }
@@ -1147,25 +1165,22 @@ body {
   cursor: pointer;
 }
 
-.reserve-field.passengers-field
-  div.border-type-1.h-full.rounded-type-1.px-2:first-child {
+.reserve-field.passengers-field div.border-type-1.h-full.rounded-type-1.px-2:first-child {
   display: flex;
   align-items: center;
   padding: 0 8px 0 0 !important;
 }
 
-
-.reserve-field.passengers-field label[for="passenger1"] span,
-.reserve-field.passengers-field label[for="passenger8"] span {
+.reserve-field.passengers-field label[for='passenger1'] span,
+.reserve-field.passengers-field label[for='passenger8'] span {
   display: none;
 }
 
-.reserve-field.passengers-field label[for="passenger1"] svg,
-.reserve-field.passengers-field label[for="passenger8"] svg {
+.reserve-field.passengers-field label[for='passenger1'] svg,
+.reserve-field.passengers-field label[for='passenger8'] svg {
   width: 48px;
   height: 24px;
 }
-
 
 .reserve-field.passengers-field label .down-icon {
   display: none;
@@ -1254,21 +1269,21 @@ body {
   display: none;
 }
 
-.removeroute-icon{
+.removeroute-icon {
   width: 24px !important;
   height: 24px !important;
 }
 
-.flighttype-field-icon{
+.flighttype-field-icon {
   display: block !important;
   right: 0 !important;
 }
-.flighttype-field-icon svg{
+.flighttype-field-icon svg {
   height: 48px !important;
   margin-top: 0 !important;
 }
 
-.reserve-location.form-search-input{
+.reserve-location.form-search-input {
   font-weight: bold;
   padding-right: 0 !important;
   font-size: 16px !important;
@@ -1280,6 +1295,11 @@ body {
   border: 1px solid #737373;
   background-color: #fff;
   width: 100%;
+  z-index: 60 !important;
+}
+
+.FlightClass.hidden-box ul{
+  clear: both;
 }
 
 .FlightClass.hidden-box li {
@@ -1293,7 +1313,7 @@ body {
 }
 
 .remove-multiroute-icon::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 24px;
   height: 25px;
@@ -1307,9 +1327,12 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .passengerbox.hidden-box {
-  border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  margin-top: 9px;
+  z-index: 60 !important;
+}
+
+.second-room-type{
+    display: none;
 }
 
 .ul-list ul li:not(:last-child) {
@@ -1346,7 +1369,11 @@ body {
 .passenger-item.room-passenger-item,
 .passengerbox.hidden-box .passenger-item {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.passenger-item .clr{
+  position: absolute;
 }
 
 .plus-count span {
@@ -1377,13 +1404,32 @@ body {
   color: white;
 }
 
+.second-room-type{
+    display: none !important;
+}
+
+.close-passenger-box{
+  margin-bottom: 4rem !important;
+  width: auto !important;
+  height: auto !important;
+}
+
 .close-passenger-box svg {
-  width: 24px !important;
-  height: 24px !important;
+width: 48px !important;
+height: 48px !important;
+}
+
+.close-module-form {
+display: none;
+}
+
+.close-searchList {
+width: auto !important;
+height: auto !important;
 }
 
 .createChildDropdown .select-age {
-  border: 1px solid #7a82ab ;
+  border: 1px solid #7a82ab;
   border-radius: 8px;
   outline: none;
   height: 48px !important;
@@ -1400,15 +1446,31 @@ body {
   margin-top: 0.5rem;
 }
 
-.contact-form
-  [data-bc-schema-direction="rtl"]
-  [data-bc-title-container]
-  [data-bc-question-title] {
+.Basis_Calendar {
+  position: fixed !important;
+  height: 100vh !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.search-box-container.mobile-search-box .Basis_Calendar .year {
+  padding-top: 60px !important;
+}
+
+.contact-form [data-bc-schema-direction='rtl'] [data-bc-title-container] [data-bc-question-title] {
   display: none !important;
 }
-.contact-form [data-bc-answer-container] input[type="text"] {
+.contact-form [data-bc-schema-direction='rtl'] [data-bc-title-container] [data-bc-question-title] {
+  display: none !important;
+}
+.contact-form [data-bc-answer-container] input[type='text'] {
   background-color: white !important;
-  color: #18181B !important;
+  color: #18181b !important;
   height: 56px !important;
   padding: 16px 12px;
   font-weight: 400 !important;
@@ -1420,7 +1482,7 @@ body {
 }
 .contact-form [data-bc-answer-container] textarea {
   background-color: white !important;
-  color: #18181B !important;
+  color: #18181b !important;
   height: 56px;
   padding: 16px 12px;
   font-weight: 400 !important;
@@ -1430,15 +1492,15 @@ body {
   font-size: 16px !important;
   direction: ltr;
 }
-.contact-form [data-bc-schema-direction="rtl"] [data-bc-part-container] {
+.contact-form [data-bc-schema-direction='rtl'] [data-bc-part-container] {
   width: 100%;
   height: 56px;
 }
-.contact-form [data-bc-answer-container] input[type="text"]::placeholder {
-  color: #18181B !important;
+.contact-form [data-bc-answer-container] input[type='text']::placeholder {
+  color: #18181b !important;
 }
 .contact-form [data-bc-answer-container] textarea::placeholder {
-  color: #18181B !important;
+  color: #18181b !important;
 }
 .contact-form [data-bc-answer-container] {
   width: 100% !important;
@@ -1447,16 +1509,16 @@ body {
   display: flex;
   flex-direction: column;
 }
-.contact-form [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
+.contact-form [data-bc-schema-info-part='1'] [data-bc-part-related-cell] {
   width: 100% !important;
 }
 .contact-form [data-bc-question] {
   width: 100%;
 }
-.contact-form [data-bc-question]:first-of-type{
+.contact-form [data-bc-question]:first-of-type {
   margin-bottom: 7px;
 }
-.contact-form [data-bc-question]:nth-child(2){
+.contact-form [data-bc-question]:nth-child(2) {
   margin-bottom: 11px;
 }
 
@@ -1469,7 +1531,7 @@ body {
   padding: 0 !important;
 }
 
-.contact-form [data-bc-validation-part]{
+.contact-form [data-bc-validation-part] {
   direction: ltr !important;
 }
 
@@ -1477,31 +1539,27 @@ body {
   margin-bottom: 0 !important;
 }
 
-
-.suggest-form [data-bc-schema-direction="rtl"] [data-bc-title-container] {
+.suggest-form [data-bc-schema-direction='rtl'] [data-bc-title-container] {
   display: none !important;
 }
-.suggest-form
-  [data-bc-schema-direction="rtl"]
-  [data-bc-title-container]
-  [data-bc-question-title] {
+.suggest-form [data-bc-schema-direction='rtl'] [data-bc-title-container] [data-bc-question-title] {
   display: none !important;
 }
-.suggest-form [data-bc-answer-container] input[type="text"] {
+.suggest-form [data-bc-answer-container] input[type='text'] {
   background-color: white !important;
-  color: #18181B !important;
+  color: #18181b !important;
   height: 56px !important;
   padding: 16px 12px !important;
   font-weight: 400 !important;
   outline: none !important;
   border-radius: 8px !important;
   border: none !important;
-  font-size: 16px !important; 
+  font-size: 16px !important;
   direction: ltr;
 }
-.suggest-form [data-bc-answer-container]  textarea {
+.suggest-form [data-bc-answer-container] textarea {
   background-color: white !important;
-  color: #18181B !important;
+  color: #18181b !important;
   height: 71px !important;
   padding: 16px 12px !important;
   font-weight: 400 !important;
@@ -1511,34 +1569,34 @@ body {
   font-size: 16px !important;
   direction: ltr;
 }
-.suggest-form [data-bc-answer-container] select{
+.suggest-form [data-bc-answer-container] select {
   background-color: white !important;
-  color: #18181B !important;
+  color: #18181b !important;
   height: 56px !important;
   padding: 16px 12px !important;
   font-weight: 400 !important;
   outline: none !important;
   border-radius: 8px !important;
   border: none !important;
-  font-size: 16px !important; 
+  font-size: 16px !important;
   direction: ltr;
 }
-.suggest-form [data-bc-schema-direction="rtl"] [data-bc-part-container] {
+.suggest-form [data-bc-schema-direction='rtl'] [data-bc-part-container] {
   width: 100%;
 }
-.suggest-form [data-bc-answer-container] input[type="text"]::placeholder {
-  color: #18181B !important;
+.suggest-form [data-bc-answer-container] input[type='text']::placeholder {
+  color: #18181b !important;
 }
 .suggest-form [data-bc-answer-container] textarea::placeholder {
-  color: #18181B !important;
+  color: #18181b !important;
 }
 .suggest-form [data-bc-answer-container] {
   width: 100% !important;
 }
-.suggest-form [data-bc-schema-info-part="1"] [data-bc-part-related-cell] {
+.suggest-form [data-bc-schema-info-part='1'] [data-bc-part-related-cell] {
   width: 100% !important;
 }
-.suggest-form [data-bc-section]{
+.suggest-form [data-bc-section] {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -1550,26 +1608,27 @@ body {
 }
 
 .suggest-form fieldset:first-of-type {
-  border-bottom: 1px solid #E0CFA5;
+  border-bottom: 1px solid #e0cfa5;
   margin-bottom: 24px !important;
   padding-bottom: 24px !important;
 }
 
-.suggest-form .left-form-message{
+.suggest-form .left-form-message {
   margin-bottom: 0;
 }
 
 .suggest-form [data-bc-question] {
   margin-bottom: 9px;
 }
-.suggest-form [data-bc-question]:nth-child(2){
+.suggest-form [data-bc-question]:nth-child(2) {
   margin-bottom: 0 !important;
 }
 
-.suggest-form [data-bc-section-title]{
+.suggest-form [data-bc-section-title] {
   float: left;
 }
 
-.suggest-form [data-bc-validation-part]{
+.suggest-form [data-bc-validation-part] {
   direction: ltr !important;
 }
+
